@@ -1,17 +1,18 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="bg-black">
+    <q-header elevated class="bg-lime-1">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+<!--        <q-btn-->
+<!--          flat-->
+<!--          dense-->
+<!--          round-->
+<!--          style="color: black"-->
+<!--          icon="menu"-->
+<!--          aria-label="Menu"-->
+<!--          @click="toggleLeftDrawer"-->
+<!--        />-->
 
-        <q-toolbar-title class="text-center">
+        <q-toolbar-title class="text-center" style="color: black">
           <q-avatar>
             <img src="~assets/chateau/logo.jpg">
           </q-avatar>
@@ -22,25 +23,25 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer class="bg-lime-1"
-              v-model="leftDrawerOpen"
-              show-if-above
-              bordered
-    >
-      <q-list>
+<!--    <q-drawer class="bg-lime-1"-->
+<!--              v-model="leftDrawerOpen"-->
+<!--              show-if-above-->
+<!--              bordered-->
+<!--    >-->
+<!--      <q-list>-->
 
-        <q-item-label header>
-          Essential Links
-        </q-item-label>
+<!--        <q-item-label header>-->
+<!--          Essential Links-->
+<!--        </q-item-label>-->
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+<!--        <EssentialLink-->
+<!--          v-for="link in essentialLinks"-->
+<!--          :key="link.title"-->
+<!--          v-bind="link"-->
+<!--        />-->
+<!--      </q-list>-->
 
-    </q-drawer>
+<!--    </q-drawer>-->
 
     <q-page-container>
       <q-card>
@@ -64,36 +65,6 @@ const linksList = [
     link: '/dashboardPage'
   },
   {
-    title: 'Tenants Profile',
-    caption: '',
-    icon: 'person',
-    link: '/tenants'
-  },
-  {
-    title: 'Unit Types',
-    caption: '',
-    icon: 'apartment',
-    link: '/unitType'
-  },
-  {
-    title: 'Payment',
-    caption: '',
-    icon: 'receipt_long',
-    link: ''
-  },
-  {
-    title: "Collectibles",
-    caption: '',
-    icon: 'payments',
-    link: '/collectibleList'
-  },
-  {
-    title: 'Settings',
-    caption: '',
-    icon: 'settings',
-    link: ''
-  },
-  {
     title: 'About Us',
     caption: '',
     icon: 'info',
@@ -105,7 +76,7 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    // EssentialLink
   },
 
   setup () {
